@@ -70,10 +70,3 @@ python tools/test.py local_configs/incepformer/Tiny/tiny_ade_512×512_160k.py /p
 tools/dist_test.sh local_configs/incepformer/Tiny/tiny_ade_512×512_160k.py /path/to/checkpoint_file <GPU_NUM> --aug-test
 ```
 
-## Citation
-```
-```
-=======
-# IncepFormer
-IncepFormer Official repo
->>>>>>> c82750e76bc982ff5320ab2f4dbe05baa8648cc4
