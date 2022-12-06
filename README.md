@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 # IncepFormer: Efficient Inception Transformer with Pyramid Pooling for Semantic Segmentation
 
 <!-- ![image](resources/image.png) -->
 <div align="center">
-  <img src="images/IncepFormer.png">
+  <img src="./images/IncepFormer.png">
 </div>
 <p align="center">
   
