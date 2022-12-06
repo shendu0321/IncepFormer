@@ -1,3 +1,4 @@
+updating....
 # IncepFormer: Efficient Inception Transformer with Pyramid Pooling for Semantic Segmentation
 
 <!-- ![image](resources/image.png) -->
@@ -34,7 +35,7 @@ pip install torchvision==0.8.0
 pip install timm==0.4.12
 pip install mmcv-full==1.5.3 
 pip install opencv-python==4.6.0.66
-cd SegFormer && pip install -e .
+cd IncepFormer && pip install -e .
 ```
 
 ## Training
