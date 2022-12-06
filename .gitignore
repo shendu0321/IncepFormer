@@ -118,9 +118,3 @@ mmseg/.mim
 
 # Pytorch
 *.pth
-
-# Picture
-*.png 
-*.jpg
-*.jpeg
-results/
