@@ -42,7 +42,7 @@ cd IncepFormer && pip install -e .
 
 Download `weights` 
 (
-[google drive]() | 
+[google drive](https://drive.google.com/drive/folders/1EbmtUFy8WjYoeTEf2qG1sdOYYyVLtKm_)
 ) 
 pretrained on ImageNet-1K, and put them in a folder ```pretrained/```.
 
