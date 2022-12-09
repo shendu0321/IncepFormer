@@ -1,14 +1,13 @@
 _base_ = [
-    '../_base_/models/IncepFormer.py',
-    '../_base_/datasets/cityscapes_768x768.py',
-    '../_base_/schedules/schedule_80k_adamw.py',
-    '../_base_/default_runtime.py'
+    '../../_base_/models/IncepFormer.py',
+    '../../_base_/datasets/cityscapes_768x768.py',
+    '../../_base_/schedules/schedule_80k_adamw.py',
+    '../../_base_/default_runtime.py'
 ]
 
 # model settings
 norm_cfg = dict(type='SyncBN', requires_grad=True)
-find_unused_parameters = True
-ckpt_path = '/home/flh/project/mmsegmentation/pretrained/xxTransformer_T.pth'
+ckpt_path = 'pretrained/IPT_T.pth'
 model = dict(
     type='EncoderDecoder',
     backbone=dict(
@@ -32,7 +31,7 @@ model = dict(
     test_cfg=dict(mode='slide', crop_size=(768, 768), stride=(512, 512)))
 
 # data
-data = dict(samples_per_gpu=8)
+data = dict(samples_per_gpu=4)
 runner = dict(type='IterBasedRunner', max_iters=160000)
 evaluation = dict(interval=4000, metric='mIoU')
 

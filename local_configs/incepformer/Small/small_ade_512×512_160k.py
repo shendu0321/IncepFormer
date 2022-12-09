@@ -6,8 +6,7 @@ _base_ = [
 ]
 
 # model settings
-ckpt_path = 'pretrained/MCPT-S.pth'
-ckpt_path = 'pretrained/MCPT_S.pth'
+ckpt_path = 'pretrained/IPT_S.pth'
 model = dict(
     type='EncoderDecoder',
     backbone=dict(

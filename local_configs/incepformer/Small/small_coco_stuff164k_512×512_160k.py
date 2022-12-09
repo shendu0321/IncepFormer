@@ -1,12 +1,12 @@
 _base_ = [
     '../../_base_/models/IncepFormer.py',
-    '../../_base_/datasets/coco-stuff164k.py',
+    '../../_base_/datasets/coco_stuff164k.py',
     '../../_base_/schedules/schedule_160k_adamw.py',
     '../../_base_/default_runtime.py'
 ]
 
 # model settings
-ckpt_path = 'pretrained/MCPT-S.pth'
+ckpt_path = 'pretrained/IPT_S.pth'
 model = dict(
     type='EncoderDecoder',
     backbone=dict(
