@@ -78,9 +78,9 @@ def main():
         model.eval()
 
         # the first several iterations may be very slow so skip them
-        num_warmup = 5
+        num_warmup = 50
         pure_inf_time = 0
-        total_iters = 200
+        total_iters = 2000
 
         # benchmark with 200 image and take the average
         for i, data in enumerate(data_loader):

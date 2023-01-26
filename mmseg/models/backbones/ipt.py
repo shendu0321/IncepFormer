@@ -337,9 +337,8 @@ def IncepTransformer_S(depths, pretrained=False, ckpt_path=None):
     return model
 
 @register_model
-def IncepTransformer_B(pretrained=False, **kwargs):
+def IncepTransformer_B(depths, pretrained=False, ckpt_path=None):
     model = IncepTransformer(
         embed_dims=[64, 128, 320, 512], num_heads=[2, 4, 8, 16], mlp_ratios=[8, 8, 4, 4], qkv_bias=True, 
-        norm_layer=partial(nn.BatchNorm2d, eps=1e-05), depths=[3, 6, 24, 2], down_ratios=[8, 4, 2, 1], 
-        **kwargs)
+        norm_layer=partial(nn.BatchNorm2d, eps=1e-05), depths=depths, down_ratios=[8, 4, 2, 1], pretrained=pretrained, ckpt_path=ckpt_path)
     return model
