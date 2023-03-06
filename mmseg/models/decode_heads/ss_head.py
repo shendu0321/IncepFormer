@@ -22,11 +22,9 @@ class SpatialSelectionModule(nn.Module):
 
 
 @HEADS.register_module()
-class UpConcatHead(BaseDecodeHead):
+class SpatialSelectionHead(BaseDecodeHead):
     def __init__(self, embedding_dim, **kwargs):
-        super(UpConcatHead, self).__init__(input_transform='multiple_select', **kwargs)
-
-        # c1_in_channels, c2_in_channels, c3_in_channels, c4_in_channels = self.in_channels
+        super(SpatialSelectionHead, self).__init__(input_transform='multiple_select', **kwargs)
 
         self.ssm = SpatialSelectionModule()
 
@@ -41,11 +39,7 @@ class UpConcatHead(BaseDecodeHead):
 
     def forward(self, inputs):
         inputs = self._transform_inputs(inputs)
-        # fea_1, fea_2, fea_3, fea_4 = inputs
-        # fea_1 = self.ssm(fea_1)
-        # fea_2 = self.ssm(fea_2)
-        # fea_3 = self.ssm(fea_3)
-
+     
         inputs[:3] = [self.ssm(input) for input in inputs[:3]]
 
         inputs = [resize(

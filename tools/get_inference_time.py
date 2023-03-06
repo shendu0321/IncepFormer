@@ -1,6 +1,6 @@
 import torch.nn as nn
 from mmseg.models.backbones import ipt,ResNetV1c
-from mmseg.models.decode_heads import UpConcatHead, FCNHead
+from mmseg.models.decode_heads import SpatialSelectionHead, FCNHead
 import torch
 import numpy as np
 
@@ -10,7 +10,7 @@ class Model(nn.Module):
     def __init__(self):
         super().__init__()
         self.encoder = ipt.IncepTransformer_B(depths=[2, 2, 4, 2])
-        self.decoder = UpConcatHead(embedding_dim=512, in_channels=[64, 128, 320, 512], in_index=[0, 1, 2, 3], channels=128, num_classes=150)
+        self.decoder = SpatialSelectionHead(embedding_dim=512, in_channels=[64, 128, 320, 512], in_index=[0, 1, 2, 3], channels=128, num_classes=150)
     
     def forward(self, x):
         x = self.encoder(x)

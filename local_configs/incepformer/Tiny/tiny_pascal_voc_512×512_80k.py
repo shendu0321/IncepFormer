@@ -1,8 +1,8 @@
 _base_ = [
-    '../_base_/models/IncepFormer.py',
-    '../_base_/datasets/pascal_voc12_aug.py',
-    '../_base_/schedules/schedule_160k_adamw.py',
-    '../_base_/default_runtime.py'
+    '../../_base_/models/IncepFormer.py',
+    '../../_base_/datasets/pascal_voc12_aug.py',
+    '../../_base_/schedules/schedule_160k_adamw.py',
+    '../../_base_/default_runtime.py'
 ]
 
 # model settings
@@ -15,7 +15,7 @@ model = dict(
         pretrained=True, 
         ckpt_path=ckpt_path),
     decode_head=dict(
-        type='UpConcatHead',
+        type='SpatialSelectionHead',
         in_channels=[64, 128, 320, 512],
         in_index=[0, 1, 2, 3],
         embedding_dim=512,

@@ -6,7 +6,7 @@ _base_ = [
 ]
 
 # model settings
-ckpt_path = 'pretrained/best_model.pth'
+ckpt_path = 'pretrained/IPT_T.pth'
 model = dict(
     type='EncoderDecoder',
     backbone=dict(
@@ -15,7 +15,7 @@ model = dict(
         pretrained=True, 
         ckpt_path=ckpt_path),
     decode_head=dict(
-        type='UpConcatHead',
+        type='SpatialSelectionHead',
         in_channels=[64, 128, 320, 512],
         in_index=[0, 1, 2, 3],
         embedding_dim=512,

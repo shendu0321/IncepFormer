@@ -142,10 +142,28 @@ def main():
         torch.backends.cudnn.benchmark = True
     if args.aug_test:
         # hard code index
-        cfg.data.test.pipeline[1].img_ratios = [
-            0.5, 0.75, 1.0, 1.25, 1.5, 1.75
-        ]
-        cfg.data.test.pipeline[1].flip = True
+        # cfg.data.test.pipeline[1].img_ratios = [
+        #     0.5, 0.75, 1.0, 1.25, 1.5, 1.75
+        # ]
+        # cfg.data.test.pipeline[1].flip = True
+        if cfg.data.test.type == 'CityscapesDataset':
+        # hard code index
+            cfg.data.test.pipeline[1].img_ratios = [
+                0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0
+            ]
+            cfg.data.test.pipeline[1].flip = True
+        elif cfg.data.test.type == 'ADE20KDataset':
+            # hard code index
+            cfg.data.test.pipeline[1].img_ratios = [
+                0.75, 0.875, 1.0, 1.125, 1.25
+            ]
+            cfg.data.test.pipeline[1].flip = True
+        else:
+            # hard code index
+            cfg.data.test.pipeline[1].img_ratios = [
+                0.5, 0.75, 1.0, 1.25, 1.5, 1.75
+            ]
+            cfg.data.test.pipeline[1].flip = True
     cfg.model.pretrained = None
     cfg.data.test.test_mode = True
 

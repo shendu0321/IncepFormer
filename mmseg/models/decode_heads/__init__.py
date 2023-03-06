@@ -28,7 +28,7 @@ from .setr_mla_head import SETRMLAHead
 from .setr_up_head import SETRUPHead
 from .stdc_head import STDCHead
 from .uper_head import UPerHead
-from .up_concat_head import UpConcatHead
+from .ss_head import SpatialSelectionHead
 
 __all__ = [
     'FCNHead', 'PSPHead', 'ASPPHead', 'PSAHead', 'NLHead', 'GCHead', 'CCHead',
@@ -37,5 +37,5 @@ __all__ = [
     'PointHead', 'APCHead', 'DMHead', 'LRASPPHead', 'SETRUPHead',
     'SETRMLAHead', 'DPTHead', 'SETRMLAHead', 'SegmenterMaskTransformerHead',
     'SegFormerHead', 'ISAHead', 'STDCHead', 'IterativeDecodeHead',
-    'KernelUpdateHead', 'KernelUpdator','UpConcatHead'
+    'KernelUpdateHead', 'KernelUpdator','SpatialSelectionHead'
 ]
