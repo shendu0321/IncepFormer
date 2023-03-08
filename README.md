@@ -1,5 +1,5 @@
 updating....
-# IncepFormer: Efficient Inception Transformer with Pyramid Pooling for Semantic Segmentation
+# IncepFormer: Efficient Inception Transformer with Spatial Selection Decoder for Semantic Segmentation
 
 <!-- ![image](resources/image.png) -->
 <div align="center">
