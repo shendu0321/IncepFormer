@@ -9,12 +9,12 @@ updating....
   
 </p>
 
-### [Project page](https://github.com/shendu0321/IncepFormer) | [Paper](http://arxiv.org/abs/2212.03035)
+<!-- ### [Project page](https://github.com/shendu0321/IncepFormer) | [Paper](http://arxiv.org/abs/2212.03035)
 
 IncepFormer: Efficient Inception Transformer with Pyramid Pooling for Semantic Segmentation.<br>
 Lihua Fu, Haoyue Tian, Xiangping Bryce Zhai, Pan Gao, Xiaojiang Peng
 
-This repository contains the official Pytorch implementation of training & evaluation code and the pretrained models for [IncepFormer](http://arxiv.org/abs/2212.03035).
+This repository contains the official Pytorch implementation of training & evaluation code and the pretrained models for [IncepFormer](http://arxiv.org/abs/2212.03035). -->
 
 
 We use [MMSegmentation v0.29.0](https://github.com/open-mmlab/mmsegmentation/tree/v0.29.0) as the codebase.
